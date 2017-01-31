@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
+int fuck();
 int main () {
-	cout << "Hello World" <<endl;
-	return 0;
+  std::cout << fuck() << std::endl;
 }
