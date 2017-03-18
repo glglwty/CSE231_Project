@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.6)
+project(DFA)
+
+set(CMAKE_CXX_STANDARD 14)
+include_directories(/usr/include/llvm-3.9)
+
+set(SOURCE_FILES
+        231DFA.h ReachingDefinitionAnalysis.cpp)
+
+add_executable(DFA ${SOURCE_FILES})
