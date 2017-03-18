@@ -238,7 +238,7 @@ namespace llvm {
                 // If there is at least one phi node, add an edge from the first phi node
                 // to the first non-phi node instruction in the basic block.
                 if (isa<PHINode>(firstInstr)) {
-                    addEdge(firstInstr, block->getFirstNonPHI(), &Bottom);
+                    addEdge(block->getFirstNonPHI(), firstInstr, &Bottom);
                 }
 
                 // Initialize edges within the basic block
@@ -365,6 +365,9 @@ namespace llvm {
         }
         std::map<Instruction *, unsigned>& getInstrToIndex() {
             return InstrToIndex;
+        }
+        std::map<unsigned, Instruction *>& getIndexToInstr() {
+            return IndexToInstr;
         }
         std::map<Edge, Info *>& getEdgeToInfo() {
             return EdgeToInfo;

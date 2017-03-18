@@ -5,6 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(/usr/include/llvm-3.9)
 
 set(SOURCE_FILES
-        231DFA.h ReachingDefinitionAnalysis.cpp)
+        231DFA.h ReachingDefinitionAnalysis.cpp MayPointToAnalysis.cpp LivenessAnalysis.cpp)
 
 add_executable(DFA ${SOURCE_FILES})
